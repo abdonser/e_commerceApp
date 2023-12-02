@@ -1,5 +1,6 @@
 import 'package:commerce_app/presentation/Component/dept_card.dart';
 import 'package:flutter/material.dart';
+import 'Layout.dart';
 
 class Departs extends StatelessWidget {
   Departs({super.key});
@@ -27,6 +28,9 @@ class Departs extends StatelessWidget {
             ],
           ),
           centerTitle: true,
+          leading: IconButton(icon: Icon(Icons.arrow_back_outlined),onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (builder)=> HomePage()));
+          },),
           actions: [
             // Shopping cart icon
             IconButton(

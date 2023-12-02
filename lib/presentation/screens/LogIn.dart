@@ -31,16 +31,16 @@ class _LoginPageState extends State<LoginPage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           CostomText(title: "BUY", color: Colors.black),
+            CostomText(title: "BUY", color: Colors.black),
             SizedBox(
               width: 5,
             ),
-           CostomText(title: "AnyTHING", color:Colors.green)
+            CostomText(title: "AnyTHING", color: Colors.green)
           ],
         ),
       ),
       body: Padding(
-        padding:  EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0),
         child: SingleChildScrollView(
           child: Container(
             height: 500,
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                   mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
                         "Hi,Welcome back",
@@ -135,8 +135,14 @@ class _LoginPageState extends State<LoginPage> {
                               // FirebaseAuth.instance.createUserWithEmailAndPassword(
                               //   email: emailcontroller.text,
                               //   password: passwordcontroller.text);
+                            } else {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
+                                content: Text(
+                                    'please enter the user name and password'),
+                                duration: Duration(seconds: 5),
+                              ));
                             }
-
                           },
                           child: const Text(
                             "login",
@@ -180,8 +186,8 @@ class _LoginPageState extends State<LoginPage> {
                               Icon(Icons.g_mobiledata_outlined),
                               Text(
                                 "sign in with google",
-                                style:
-                                    TextStyle(fontSize: 20, color: Colors.white),
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
                               ),
                             ],
                           ),

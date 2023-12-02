@@ -45,7 +45,7 @@ dependencies:
   app_theme_mode: ^1.0.0
   firebase_analytics: ^10.7.1
   global_bottom_navigation_bar: ^0.0.8
-  light_bottom_navigation_bar: ^0.0.2
+
 
 
 
@@ -58,7 +58,7 @@ dev_dependencies:
 
 flutter_icons:
     android: true
-    ios: true
+    ios: false
     image_path: " assets/images/icon.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -89,7 +89,7 @@ flutter:
     - assets/images/onboarding2.jpg
     - assets/images/onboarding4.jpg
     - assets/images/onboarding3.jpg
-    - assets/images/icon.png
+
     -
     -
 

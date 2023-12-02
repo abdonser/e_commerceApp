@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Layout.dart';
 
 class AboutDeleloper extends StatelessWidget {
   const AboutDeleloper({super.key});
@@ -10,6 +11,9 @@ class AboutDeleloper extends StatelessWidget {
         title: Text("about developer"),
         centerTitle: true,
         backgroundColor: Colors.grey[100],
+        leading: IconButton(icon: Icon(Icons.arrow_back_outlined),onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (builder)=> HomePage()));
+        },),
       ),
       body: Container(
         padding: EdgeInsetsDirectional.only(top: 50),

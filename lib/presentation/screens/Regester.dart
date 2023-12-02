@@ -163,6 +163,14 @@ class _RegesterPageState extends State<RegesterPage> {
                                       MaterialPageRoute(
                                           builder: (context) => const HomePage())));
                             }
+                            else {
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(SnackBar(
+                                content: Text(
+                                    'please enter the user name and password'),
+                                duration: Duration(seconds: 5),
+                              ));
+                            }
                           },
                           child: const Text(
                             "Regester",
